@@ -1,0 +1,13 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.moldkey/oracleluck",
+  "title": "OracleLuck 天啟好運",
+  "description": "Chinese metaphysics toolkit: daily almanac (黃曆), four-pillar BaZi charts, I Ching hexagrams, 78 tarot cards, and full-text search over a 3,100-page knowledge base. All data is computed by deterministic engines — 1,096 precomputed days of calendar, all 64 hexagrams, all 78 tarot cards.",
+  "version": "1.1.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://www.oracleluck.com/mcp"
+    }
+  ]
+}
