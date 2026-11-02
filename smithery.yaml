@@ -1,0 +1,63 @@
+# Smithery configuration for OracleLuck MCP server
+# https://smithery.ai/docs
+#
+# This is a REMOTE (hosted) MCP server — no local installation.
+# Smithery supports remote servers declared via `startCommand.type: http`.
+
+name: oracleluck
+displayName: "OracleLuck 天啟好運"
+description: >
+  Chinese metaphysics MCP server — daily almanac (黃曆), four-pillar BaZi charts,
+  I Ching hexagrams, 78 tarot cards, and a searchable knowledge base of 3,100+
+  pages across Chinese and Western systems.
+version: "1.1.0"
+license: MIT
+homepage: https://www.oracleluck.com
+repository: https://github.com/oracleluck/mcp-server
+
+startCommand:
+  type: http
+  url: https://www.oracleluck.com/mcp
+  configSchema:
+    type: object
+    properties: {}
+    required: []
+
+tools:
+  - name: get_almanac
+    description: >
+      Chinese almanac for a given date: lunar date, year/month/day pillars,
+      solar term, 建除十二神, 六曜, zodiac clash, wealth/joy/fortune directions,
+      and lucky hours. Defaults to today.
+  - name: get_bazi
+    description: >
+      Four-pillar BaZi chart from a birth date and time: year/month/day/hour
+      pillars, ten gods, five-element distribution, day master.
+  - name: cast_hexagram
+    description: >
+      Cast an I Ching coin-method hexagram. Returns the six lines (yin/yang),
+      upper/lower trigrams and moving line. No fortune-telling verdicts.
+  - name: get_tarot
+    description: >
+      Tarot card meaning for any of the 78 cards: upright, reversed, love,
+      career and advice.
+  - name: search_knowledge
+    description: >
+      Full-text search across 1,400+ knowledge-base articles covering Zi Wei,
+      BaZi, I Ching, tarot, dream interpretation and the almanac.
+
+tags:
+  - astrology
+  - chinese-astrology
+  - bazi
+  - almanac
+  - iching
+  - tarot
+  - feng-shui
+  - reference
+  - culture
+
+categories:
+  - lifestyle
+  - reference
+  - developer-tools
